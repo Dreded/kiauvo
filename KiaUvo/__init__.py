@@ -22,14 +22,14 @@ class KiaUvo(object):
         'host': 'www.myuvo.ca',
         'origin': 'https://www.myuvo.ca',
         'referer': 'https://www.myuvo.ca/login',
-        'from': 'CWP',
+        'from': 'SPA',
         'language': '0',
         'offset': '0',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin'
     }
-
+#the from header is only needed in canada and should be 'from': 'SPA', otherwise find_my_vehicle() will not work.
     base_url = 'https://www.myuvo.ca/tods/api/'
 
     def __init__(self, username, password):
